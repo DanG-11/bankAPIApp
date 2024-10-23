@@ -32,12 +32,12 @@
             txtBoxNrRachunku = new TextBox();
             btnPobierzDane = new Button();
             grpBoxRachunek = new GroupBox();
-            grpBoxLblNazwaRachunku = new Label();
-            grpBoxLblNrRachunku = new Label();
-            grpBoxLblKwotaNaRachunku = new Label();
-            grpBoxTxtBoxNazwaRachunku = new TextBox();
-            grpBoxTxtBoxNrRachunku = new TextBox();
             grpBoxTxtBoxKwotaNaRachunku = new TextBox();
+            grpBoxTxtBoxNrRachunku = new TextBox();
+            grpBoxTxtBoxNazwaRachunku = new TextBox();
+            grpBoxLblKwotaNaRachunku = new Label();
+            grpBoxLblNrRachunku = new Label();
+            grpBoxLblNazwaRachunku = new Label();
             grpBoxRachunek.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,6 +65,7 @@
             btnPobierzDane.TabIndex = 2;
             btnPobierzDane.Text = "Pobierz dane";
             btnPobierzDane.UseVisualStyleBackColor = true;
+            btnPobierzDane.Click += GetAccountData;
             // 
             // grpBoxRachunek
             // 
@@ -81,23 +82,26 @@
             grpBoxRachunek.TabStop = false;
             grpBoxRachunek.Text = "Rachunek";
             // 
-            // grpBoxLblNazwaRachunku
+            // grpBoxTxtBoxKwotaNaRachunku
             // 
-            grpBoxLblNazwaRachunku.AutoSize = true;
-            grpBoxLblNazwaRachunku.Location = new Point(6, 19);
-            grpBoxLblNazwaRachunku.Name = "grpBoxLblNazwaRachunku";
-            grpBoxLblNazwaRachunku.Size = new Size(98, 15);
-            grpBoxLblNazwaRachunku.TabIndex = 0;
-            grpBoxLblNazwaRachunku.Text = "Nazwa rachunku:";
+            grpBoxTxtBoxKwotaNaRachunku.Location = new Point(124, 74);
+            grpBoxTxtBoxKwotaNaRachunku.Name = "grpBoxTxtBoxKwotaNaRachunku";
+            grpBoxTxtBoxKwotaNaRachunku.Size = new Size(159, 23);
+            grpBoxTxtBoxKwotaNaRachunku.TabIndex = 5;
             // 
-            // grpBoxLblNrRachunku
+            // grpBoxTxtBoxNrRachunku
             // 
-            grpBoxLblNrRachunku.AutoSize = true;
-            grpBoxLblNrRachunku.Location = new Point(6, 48);
-            grpBoxLblNrRachunku.Name = "grpBoxLblNrRachunku";
-            grpBoxLblNrRachunku.Size = new Size(100, 15);
-            grpBoxLblNrRachunku.TabIndex = 1;
-            grpBoxLblNrRachunku.Text = "Numer rachunku:";
+            grpBoxTxtBoxNrRachunku.Location = new Point(124, 45);
+            grpBoxTxtBoxNrRachunku.Name = "grpBoxTxtBoxNrRachunku";
+            grpBoxTxtBoxNrRachunku.Size = new Size(159, 23);
+            grpBoxTxtBoxNrRachunku.TabIndex = 4;
+            // 
+            // grpBoxTxtBoxNazwaRachunku
+            // 
+            grpBoxTxtBoxNazwaRachunku.Location = new Point(124, 16);
+            grpBoxTxtBoxNazwaRachunku.Name = "grpBoxTxtBoxNazwaRachunku";
+            grpBoxTxtBoxNazwaRachunku.Size = new Size(159, 23);
+            grpBoxTxtBoxNazwaRachunku.TabIndex = 3;
             // 
             // grpBoxLblKwotaNaRachunku
             // 
@@ -108,26 +112,23 @@
             grpBoxLblKwotaNaRachunku.TabIndex = 2;
             grpBoxLblKwotaNaRachunku.Text = "Kwota na rachunku:";
             // 
-            // grpBoxTxtBoxNazwaRachunku
+            // grpBoxLblNrRachunku
             // 
-            grpBoxTxtBoxNazwaRachunku.Location = new Point(124, 16);
-            grpBoxTxtBoxNazwaRachunku.Name = "grpBoxTxtBoxNazwaRachunku";
-            grpBoxTxtBoxNazwaRachunku.Size = new Size(159, 23);
-            grpBoxTxtBoxNazwaRachunku.TabIndex = 3;
+            grpBoxLblNrRachunku.AutoSize = true;
+            grpBoxLblNrRachunku.Location = new Point(6, 48);
+            grpBoxLblNrRachunku.Name = "grpBoxLblNrRachunku";
+            grpBoxLblNrRachunku.Size = new Size(100, 15);
+            grpBoxLblNrRachunku.TabIndex = 1;
+            grpBoxLblNrRachunku.Text = "Numer rachunku:";
             // 
-            // grpBoxTxtBoxNrRachunku
+            // grpBoxLblNazwaRachunku
             // 
-            grpBoxTxtBoxNrRachunku.Location = new Point(124, 45);
-            grpBoxTxtBoxNrRachunku.Name = "grpBoxTxtBoxNrRachunku";
-            grpBoxTxtBoxNrRachunku.Size = new Size(159, 23);
-            grpBoxTxtBoxNrRachunku.TabIndex = 4;
-            // 
-            // grpBoxTxtBoxKwotaNaRachunku
-            // 
-            grpBoxTxtBoxKwotaNaRachunku.Location = new Point(124, 74);
-            grpBoxTxtBoxKwotaNaRachunku.Name = "grpBoxTxtBoxKwotaNaRachunku";
-            grpBoxTxtBoxKwotaNaRachunku.Size = new Size(159, 23);
-            grpBoxTxtBoxKwotaNaRachunku.TabIndex = 5;
+            grpBoxLblNazwaRachunku.AutoSize = true;
+            grpBoxLblNazwaRachunku.Location = new Point(6, 19);
+            grpBoxLblNazwaRachunku.Name = "grpBoxLblNazwaRachunku";
+            grpBoxLblNazwaRachunku.Size = new Size(98, 15);
+            grpBoxLblNazwaRachunku.TabIndex = 0;
+            grpBoxLblNazwaRachunku.Text = "Nazwa rachunku:";
             // 
             // frmRachunek
             // 
