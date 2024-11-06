@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System.Net.Http.Json;
 
 namespace bankAPIApp
 {
@@ -15,14 +16,14 @@ namespace bankAPIApp
         private void GetAccountData(object sender, EventArgs e)
         {
             HttpClient klient = new HttpClient();
-            string url = "http://localhost/bankAPI/account/";
-            url += txtBoxNrRachunku.Text;
-            HttpResponseMessage odpowiedz = klient.GetAsync(url).Result;
+            string url = "http://localhost/bankAPI/account/details/";
+            var data = new { token = token };
+            HttpResponseMessage odpowiedz = klient.PostAsJsonAsync(url, data).Result;
             string json = odpowiedz.Content.ReadAsStringAsync().Result;
             Account konto = JsonConvert.DeserializeObject<Account>(json);
-            grpBoxLblNazwaRachunku.Text = konto.name;
-            grpBoxLblNrRachunku.Text = konto.accountNo.ToString();
-            grpBoxLblKwotaNaRachunku.Text = konto.amount.ToString();
+            grpBoxTxtBoxNazwaRachunku.Text = konto.name;
+            grpBoxTxtBoxNrRachunku.Text = konto.accountNo.ToString();
+            grpBoxTxtBoxKwotaNaRachunku.Text = konto.amount.ToString();
         }
 
         private void OnAppLoad(object sender, EventArgs e)
@@ -31,6 +32,7 @@ namespace bankAPIApp
             if (loginForm.ShowDialog(this) == DialogResult.OK)
             {
                 this.Show();
+                GetAccountData(sender, e);
             }
             else
             {

@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblNrRachunku = new Label();
-            txtBoxNrRachunku = new TextBox();
-            btnPobierzDane = new Button();
             grpBoxRachunek = new GroupBox();
             grpBoxTxtBoxKwotaNaRachunku = new TextBox();
             grpBoxTxtBoxNrRachunku = new TextBox();
@@ -41,32 +38,6 @@
             grpBoxRachunek.SuspendLayout();
             SuspendLayout();
             // 
-            // lblNrRachunku
-            // 
-            lblNrRachunku.AutoSize = true;
-            lblNrRachunku.Location = new Point(12, 9);
-            lblNrRachunku.Name = "lblNrRachunku";
-            lblNrRachunku.Size = new Size(100, 15);
-            lblNrRachunku.TabIndex = 0;
-            lblNrRachunku.Text = "Numer rachunku:";
-            // 
-            // txtBoxNrRachunku
-            // 
-            txtBoxNrRachunku.Location = new Point(118, 6);
-            txtBoxNrRachunku.Name = "txtBoxNrRachunku";
-            txtBoxNrRachunku.Size = new Size(100, 23);
-            txtBoxNrRachunku.TabIndex = 1;
-            // 
-            // btnPobierzDane
-            // 
-            btnPobierzDane.Location = new Point(224, 6);
-            btnPobierzDane.Name = "btnPobierzDane";
-            btnPobierzDane.Size = new Size(83, 23);
-            btnPobierzDane.TabIndex = 2;
-            btnPobierzDane.Text = "Pobierz dane";
-            btnPobierzDane.UseVisualStyleBackColor = true;
-            btnPobierzDane.Click += GetAccountData;
-            // 
             // grpBoxRachunek
             // 
             grpBoxRachunek.Controls.Add(grpBoxTxtBoxKwotaNaRachunku);
@@ -75,7 +46,7 @@
             grpBoxRachunek.Controls.Add(grpBoxLblKwotaNaRachunku);
             grpBoxRachunek.Controls.Add(grpBoxLblNrRachunku);
             grpBoxRachunek.Controls.Add(grpBoxLblNazwaRachunku);
-            grpBoxRachunek.Location = new Point(18, 35);
+            grpBoxRachunek.Location = new Point(12, 12);
             grpBoxRachunek.Name = "grpBoxRachunek";
             grpBoxRachunek.Size = new Size(289, 105);
             grpBoxRachunek.TabIndex = 3;
@@ -134,25 +105,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(326, 146);
+            ClientSize = new Size(315, 133);
             Controls.Add(grpBoxRachunek);
-            Controls.Add(btnPobierzDane);
-            Controls.Add(txtBoxNrRachunku);
-            Controls.Add(lblNrRachunku);
             Name = "frmRachunek";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Rachunek";
             Load += OnAppLoad;
             grpBoxRachunek.ResumeLayout(false);
             grpBoxRachunek.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label lblNrRachunku;
-        private TextBox txtBoxNrRachunku;
-        private Button btnPobierzDane;
         private GroupBox grpBoxRachunek;
         private TextBox grpBoxTxtBoxKwotaNaRachunku;
         private TextBox grpBoxTxtBoxNrRachunku;

@@ -104,7 +104,7 @@
             btnZaloguj.Location = new Point(3, 321);
             btnZaloguj.Name = "btnZaloguj";
             btnZaloguj.Size = new Size(382, 102);
-            btnZaloguj.TabIndex = 3;
+            btnZaloguj.TabIndex = 5;
             btnZaloguj.Text = "Zaloguj";
             btnZaloguj.UseVisualStyleBackColor = true;
             btnZaloguj.Click += PrzyciskZalogujWcisniety;
@@ -115,7 +115,7 @@
             btnWyjdz.Location = new Point(391, 321);
             btnWyjdz.Name = "btnWyjdz";
             btnWyjdz.Size = new Size(382, 102);
-            btnWyjdz.TabIndex = 4;
+            btnWyjdz.TabIndex = 6;
             btnWyjdz.Text = "Wyjdź";
             btnWyjdz.UseVisualStyleBackColor = true;
             btnWyjdz.Click += PrzyciskWyjdzKlikniety;
@@ -126,7 +126,8 @@
             txtBoxEMail.Location = new Point(391, 109);
             txtBoxEMail.Name = "txtBoxEMail";
             txtBoxEMail.Size = new Size(382, 23);
-            txtBoxEMail.TabIndex = 5;
+            txtBoxEMail.TabIndex = 3;
+            txtBoxEMail.Text = "jkowalski@teb.edu.pl";
             // 
             // txtBoxHaslo
             // 
@@ -135,7 +136,8 @@
             txtBoxHaslo.Name = "txtBoxHaslo";
             txtBoxHaslo.PasswordChar = '*';
             txtBoxHaslo.Size = new Size(382, 23);
-            txtBoxHaslo.TabIndex = 6;
+            txtBoxHaslo.TabIndex = 4;
+            txtBoxHaslo.Text = "321";
             txtBoxHaslo.UseSystemPasswordChar = true;
             // 
             // Login
@@ -145,6 +147,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tabLayPanLogowanie);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             tabLayPanLogowanie.ResumeLayout(false);
             tabLayPanLogowanie.PerformLayout();
