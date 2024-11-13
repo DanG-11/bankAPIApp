@@ -24,6 +24,7 @@ namespace bankAPIApp
             grpBoxTxtBoxNazwaRachunku.Text = konto.name;
             grpBoxTxtBoxNrRachunku.Text = konto.accountNo.ToString();
             grpBoxTxtBoxKwotaNaRachunku.Text = konto.amount.ToString();
+            StsStripLblToken.Text = Convert.ToString(token);
         }
 
         private void OnAppLoad(object sender, EventArgs e)
@@ -38,6 +39,16 @@ namespace bankAPIApp
             {
                 Application.Exit();
             }
+        }
+
+        private void BtnPrzejdzDoPrzelewow_Click(object sender, EventArgs e)
+        {
+            NewTransfer newTransfer = new NewTransfer();
+
+            newTransfer.token = token;
+            newTransfer.source = grpBoxTxtBoxNazwaRachunku.Text;
+
+            newTransfer.ShowDialog();
         }
     }
 }

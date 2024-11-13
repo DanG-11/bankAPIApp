@@ -35,7 +35,11 @@
             grpBoxLblKwotaNaRachunku = new Label();
             grpBoxLblNrRachunku = new Label();
             grpBoxLblNazwaRachunku = new Label();
+            BtnPrzejdzDoPrzelewow = new Button();
+            StsStrpRachunek = new StatusStrip();
+            StsStripLblToken = new ToolStripStatusLabel();
             grpBoxRachunek.SuspendLayout();
+            StsStrpRachunek.SuspendLayout();
             SuspendLayout();
             // 
             // grpBoxRachunek
@@ -101,11 +105,37 @@
             grpBoxLblNazwaRachunku.TabIndex = 0;
             grpBoxLblNazwaRachunku.Text = "Nazwa rachunku:";
             // 
+            // BtnPrzejdzDoPrzelewow
+            // 
+            BtnPrzejdzDoPrzelewow.Location = new Point(12, 123);
+            BtnPrzejdzDoPrzelewow.Name = "BtnPrzejdzDoPrzelewow";
+            BtnPrzejdzDoPrzelewow.Size = new Size(289, 23);
+            BtnPrzejdzDoPrzelewow.TabIndex = 4;
+            BtnPrzejdzDoPrzelewow.Text = "Przejdź do przelewów:";
+            BtnPrzejdzDoPrzelewow.UseVisualStyleBackColor = true;
+            BtnPrzejdzDoPrzelewow.Click += BtnPrzejdzDoPrzelewow_Click;
+            // 
+            // StsStrpRachunek
+            // 
+            StsStrpRachunek.Items.AddRange(new ToolStripItem[] { StsStripLblToken });
+            StsStrpRachunek.Location = new Point(0, 151);
+            StsStrpRachunek.Name = "StsStrpRachunek";
+            StsStrpRachunek.Size = new Size(315, 22);
+            StsStrpRachunek.TabIndex = 5;
+            StsStrpRachunek.Text = "statusStrip1";
+            // 
+            // StsStripLblToken
+            // 
+            StsStripLblToken.Name = "StsStripLblToken";
+            StsStripLblToken.Size = new Size(0, 17);
+            // 
             // frmRachunek
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(315, 133);
+            ClientSize = new Size(315, 173);
+            Controls.Add(StsStrpRachunek);
+            Controls.Add(BtnPrzejdzDoPrzelewow);
             Controls.Add(grpBoxRachunek);
             Name = "frmRachunek";
             StartPosition = FormStartPosition.CenterScreen;
@@ -113,7 +143,10 @@
             Load += OnAppLoad;
             grpBoxRachunek.ResumeLayout(false);
             grpBoxRachunek.PerformLayout();
+            StsStrpRachunek.ResumeLayout(false);
+            StsStrpRachunek.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -124,5 +157,8 @@
         private Label grpBoxLblKwotaNaRachunku;
         private Label grpBoxLblNrRachunku;
         private Label grpBoxLblNazwaRachunku;
+        private Button BtnPrzejdzDoPrzelewow;
+        private StatusStrip StsStrpRachunek;
+        private ToolStripStatusLabel StsStripLblToken;
     }
 }
