@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace bankAPIApp
 {
-    class Token
+    class TokenRequestClass
     {
         public string token { get; set; }
     }

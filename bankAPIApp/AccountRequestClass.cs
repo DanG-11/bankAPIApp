@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace bankAPIApp
 {
-    internal class Account
+    internal class AccountRequestClass
     {       
             public string accountNo { get; set; }
             public string amount { get; set; }

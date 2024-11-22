@@ -20,7 +20,7 @@ namespace bankAPIApp
             var data = new { token = token };
             HttpResponseMessage odpowiedz = klient.PostAsJsonAsync(url, data).Result;
             string json = odpowiedz.Content.ReadAsStringAsync().Result;
-            Account konto = JsonConvert.DeserializeObject<Account>(json);
+            AccountRequestClass konto = JsonConvert.DeserializeObject<AccountRequestClass>(json);
             grpBoxTxtBoxNazwaRachunku.Text = konto.name;
             grpBoxTxtBoxNrRachunku.Text = konto.accountNo.ToString();
             grpBoxTxtBoxKwotaNaRachunku.Text = konto.amount.ToString();

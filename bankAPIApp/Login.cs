@@ -30,10 +30,10 @@ namespace bankAPIApp
 
             HttpClient client = new HttpClient();
             string url = "http://localhost/bankAPI/login";
-            var data = new { login = login, password = haslo };
+            var data = new LoginRequestClass(login, haslo);
             HttpResponseMessage odpowiedz = client.PostAsJsonAsync(url, data).Result;
             string json = odpowiedz.Content.ReadAsStringAsync().Result;
-            Token token = JsonConvert.DeserializeObject<Token>(json);
+            TokenRequestClass token = JsonConvert.DeserializeObject<TokenRequestClass>(json);
             Rachunek.token = token.token;
             this.DialogResult = DialogResult.OK;
             this.Close();
