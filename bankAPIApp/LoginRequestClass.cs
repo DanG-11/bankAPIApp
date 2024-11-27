@@ -11,8 +11,8 @@ namespace bankAPIApp
     internal class LoginRequestClass
     {
         public string login { get; set; }
-
         public string password { get; set; }
+
         public LoginRequestClass(string login, string password)
         {
             this.login = login;
